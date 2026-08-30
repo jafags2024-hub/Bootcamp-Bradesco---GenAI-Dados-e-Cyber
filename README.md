@@ -80,19 +80,19 @@ Para alimentar o caderno temático no NotebookLM, foram selecionadas 4 fontes of
 
 \- \*\*Prompt Inicial (Genérico):\*\* \*"Qual a diferença entre a Tabela Price e o Sistema SAC no financiamento da casa própria?"\*
 
-&#x20; - \*\*Resultado:\*\* A IA apresentou apenas a diferença básica (Price tem parcelas fixas; SAC tem parcelas decrescentes), sem abordar a taxa de amortização e omitindo os seguros obrigatórios do CET.
+&#x20; - \*\*Resultado:\*\* A IA apresentou dados corretos das diferenças .
 
 \- \*\*Prompt Refinado (Técnico):\*\* \*"Com base nas fontes fornecidas, explique analiticamente por que o Sistema SAC amortiza o saldo devedor mais rapidamente nos primeiros 5 anos do que a Tabela Price para um mesmo valor financiado. Explique também como o Custo Efetivo Total (CET) difere da taxa nominal ao incluir as tarifas e seguros obrigatórios (MIP e DFI)."\*
 
-&#x20; - \*\*Resultado:\*\* A resposta foi altamente precisa: detalhou que na Price as primeiras prestações são compostas majoritariamente por juros, enquanto no SAC a cota de amortização principal ($A = SD\_0 / n$) é constante desde a primeira parcela, reduzindo a base de cálculo dos juros futuros de forma acelerada.
+&#x20; - \*\*Resultado:\*\* A resposta foi altamente precisa: detalhou os cálculos e gerou uma planilha Excel com o comparativo.
 
 
 
 \### Troubleshooting e Lições Aprendidas ("Cicatrizes")
 
-\- \*\*Desafio Encontrado:\*\* O NotebookLM inicialmente tendeu a tratar a \*Taxa de Juros Nominal\* como equivalente ao \*Custo Efetivo Total (CET)\* ao responder sobre o custo real da operação para o mutuário.
+\- \*\*Desafio Encontrado:\*\* O NotebookLM funcionou como o esperaco e mostrou o cálculo da comparação.
 
-\- \*\*Solução:\*\* Incluir a seguinte diretriz de calibração no prompt: \*"Diferencie estritamente a taxa de juros nominal contratada do CET, destacando que o CET engloba IOF, tarifas administrativas e prêmios de seguro habitacional vinculados ao contrato."\*
+\- \*\*Solução:\*\* Foi incluído um Prompt de comando para o cálculo de simulação de financiamento que pode ser utilizado para qualquer valor"\*
 
 
 
@@ -171,4 +171,9 @@ O CET representa a porcentagem real paga pelo mutuário e é composto por:
 2\. \*\*Análise Crítica de CET x Taxa Nominal:\*\*
 
 &#x20;  > \*"Com base nas diretrizes do Banco Central, explique como identificar se um contrato bancário possui cobranças desalinhadas analisando a diferença percentual entre a Taxa Nominal Contratada e o CET final exibido na proposta."\*
+
+Link do NotebookLM na web: https://notebook.google.com/notebook/ab1c2936-4d4e-4d4c-8e6d-5bbf74019908
+
+
+
 
